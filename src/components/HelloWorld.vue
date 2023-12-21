@@ -13,7 +13,7 @@ const COLUMNS = [
   { title: "empty", cell: "empty" },
   { field: "number", title: "Number 2" },
   { title: "Optional 4", id: "o4", field: "number2" },
-  { field: "number", title: "Number 3" },
+  { field: "number", title: "Number 3", cell: "twice" },
   { title: "Optional 5", id: "o5", cell: "randomString" },
 ];
 
@@ -49,6 +49,9 @@ function hide(col: string) {
     </template>
     <template v-slot:randomString="{ props }">
       <td>{{ props.dataItem.randomString || 'some-string' }}</td>
+    </template>
+    <template v-slot:twice="{ props }">
+      <td>{{ props.dataItem.number * 2 }}</td>
     </template>
   </Grid>
 </template>
