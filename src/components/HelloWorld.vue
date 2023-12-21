@@ -32,6 +32,7 @@ function hide(col: string) {
 </script>
 
 <template>
+  <p>Toggle off optionals 1, 2, or 3 to see the "Number 2" column 'bleed' on "Optional 4"</p>
   <ButtonGroup>
     <Button @click="() => data.push(getRandom())">Add</Button>
     <Button @click="() => data.push(gen(Math.ceil(Math.random() * 100)))">Add Small</Button>
